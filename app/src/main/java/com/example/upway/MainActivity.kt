@@ -37,6 +37,6 @@ fun MainView() {
             .background(Color.Black),
         contentAlignment = Alignment.Center
     ) {
-        Text(text = "Hello World")
+        Text(text = "Hello World",color = Color.White)
     }
 }
