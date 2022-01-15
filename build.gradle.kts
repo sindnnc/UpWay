@@ -7,6 +7,8 @@ buildscript {
     dependencies {
         classpath(BuildPlugin.androidPlugin)
         classpath(BuildPlugin.kotlinPlugin)
+        classpath(BuildPlugin.hiltPlugin)
+        classpath(BuildPlugin.SerializationPlugin)
     }
 }
 

@@ -1,4 +1,4 @@
-package com.example.upway.ui.theme
+package com.example.component.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
@@ -7,25 +7,17 @@ import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 
 private val DarkColorPalette = darkColors(
-    primary = Purple200,
-    primaryVariant = Purple700,
-    secondary = Teal200
+    primary = Grey.p100,
+    primaryVariant = Grey.p300,
+    secondary = Grey.p500,
 )
 
 private val LightColorPalette = lightColors(
-    primary = Purple500,
-    primaryVariant = Purple700,
-    secondary = Teal200
-
-    /* Other default colors to override
-    background = Color.White,
-    surface = Color.White,
-    onPrimary = Color.White,
-    onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black,
-    */
+    primary = Blue.p300,
+    primaryVariant = Blue.p500,
+    secondary = Green.p100,
 )
+
 
 @Composable
 fun UpWayTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
@@ -38,7 +30,7 @@ fun UpWayTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable(
     MaterialTheme(
         colors = colors,
         typography = Typography,
-        shapes = Shapes,
+        shapes = CustomMediumShapes,
         content = content
     )
 }

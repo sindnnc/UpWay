@@ -7,3 +7,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "UpWay"
 include ':app'
+include ':component'
+include ':core'

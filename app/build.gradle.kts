@@ -1,6 +1,9 @@
 plugins {
     id(IdPlugin.android)
     id(IdPlugin.application)
+    kotlin(IdPlugin.kapt)
+    id(IdPlugin.hilt)
+    id(IdPlugin.serialization)
 }
 
 android {
@@ -23,13 +26,12 @@ android {
         getByName("release") {
             isMinifyEnabled = false
             proguardFiles(
-                    getDefaultProguardFile("proguard-android-optimize.txt"),
-                    "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
             )
-
         }
-
     }
+
     buildFeatures {
         compose = true
     }
@@ -49,12 +51,34 @@ android {
     }
 }
 
+kapt {
+    correctErrorTypes = true
+}
+
+
 dependencies {
+    //MODULES
+    implementation(project(Modules.component))
+    implementation(project(Modules.core))
+
+    //HILT
+    implementation(Dependencies.hiltAndroid)
+    kapt(Dependencies.hiltCompiler)
+
     //CORE
     implementation(Dependencies.core)
     implementation(Dependencies.appCompat)
     implementation(Dependencies.lifecycle)
     implementation(Dependencies.googleMaterial)
+
+    //JETBRAINS
+    implementation(Dependencies.jetBrainsKotlin)
+
+    //KTOR
+    implementation(Dependencies.ktorCio)
+    implementation(Dependencies.ktorCore)
+    implementation(Dependencies.ktorSerialization)
+    implementation(Dependencies.jetBrainSerialization)
 
     //COMPOSE
     implementation(Dependencies.composeUi)
