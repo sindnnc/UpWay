@@ -13,9 +13,13 @@ object Dependencies {
     const val composeMaterial = "androidx.compose.material:material:${Versions.COMPOSE_VERSION}"
     const val composePreview = "androidx.compose.ui:ui-tooling-preview:${Versions.COMPOSE_VERSION}"
 
+    //NAVIGATION
+    const val navigation = "androidx.navigation:navigation-compose:${Versions.NAVIGATION_VERSION}"
+    const val hiltNavigation = "androidx.hilt:hilt-navigation-compose:${Versions.HILT_NAVIGATION_VERSION}"
+
     //HILT
     const val hiltAndroid = "com.google.dagger:hilt-android:${Versions.HILT_VERSION}"
-    const val hiltCompiler = "com.google.dagger:hilt-compiler:${Versions.HILT_VERSION}"
+    const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.HILT_VERSION}"
 
     //KTOR
     const val ktorCore = "io.ktor:ktor-client-core:${Versions.KTOR_VERSION}"
@@ -24,5 +28,5 @@ object Dependencies {
 
     //JETBRAINS
     const val jetBrainsKotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.KOTLIN_VERSION}"
-    const val jetBrainSerialization =  "org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2"
+    const val jetBrainSerialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2"
 }

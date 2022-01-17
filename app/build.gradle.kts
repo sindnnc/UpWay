@@ -3,9 +3,7 @@ plugins {
     id(IdPlugin.application)
     kotlin(IdPlugin.kapt)
     id(IdPlugin.hilt)
-    id(IdPlugin.serialization)
 }
-
 android {
     compileSdk = Config.targetSdk
 
@@ -31,7 +29,6 @@ android {
             )
         }
     }
-
     buildFeatures {
         compose = true
     }
@@ -60,6 +57,7 @@ dependencies {
     //MODULES
     implementation(project(Modules.component))
     implementation(project(Modules.core))
+    implementation(project(Modules.features))
 
     //HILT
     implementation(Dependencies.hiltAndroid)
@@ -70,9 +68,6 @@ dependencies {
     implementation(Dependencies.appCompat)
     implementation(Dependencies.lifecycle)
     implementation(Dependencies.googleMaterial)
-
-    //JETBRAINS
-    implementation(Dependencies.jetBrainsKotlin)
 
     //KTOR
     implementation(Dependencies.ktorCio)

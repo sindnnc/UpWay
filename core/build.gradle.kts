@@ -1,6 +1,7 @@
 plugins {
     id(IdPlugin.android)
     id(IdPlugin.library)
+    id(IdPlugin.serialization)
 }
 
 android {
@@ -22,13 +23,6 @@ android {
             )
         }
     }
-
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = Versions.COMPOSE_VERSION
-    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -39,10 +33,27 @@ android {
 }
 
 dependencies {
+
+    //MODULES
+    
+
+    //CORE
     implementation(Dependencies.core)
     implementation(Dependencies.appCompat)
     implementation(Dependencies.googleMaterial)
+
+    //TEST
     testImplementation(TestDependencies.junit)
     androidTestImplementation(AndroidTestDependencies.junit)
     androidTestImplementation(AndroidTestDependencies.espresso)
+
+    //KTOR
+    implementation(Dependencies.ktorCio)
+    implementation(Dependencies.ktorCore)
+    implementation(Dependencies.ktorSerialization)
+    implementation(Dependencies.jetBrainSerialization)
+
+    //JETBRAINS
+    implementation(Dependencies.jetBrainsKotlin)
+
 }

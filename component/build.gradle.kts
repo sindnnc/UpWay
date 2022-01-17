@@ -49,5 +49,4 @@ dependencies {
     implementation(Dependencies.compose)
     implementation(Dependencies.composeUi)
     implementation(Dependencies.composeMaterial)
-
 }

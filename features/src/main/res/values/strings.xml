@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">UpWay</string>
+    <string name="welcome">Welcome</string>
+    <string name="create_account_text">Create an account</string>
+    <string name="login_facebook_text">Login with Facebook</string>
+    <string name="login_google_text">Login with Google</string>
+    <string name="login_email_text">Login with Email and Password</string>
+</resources>

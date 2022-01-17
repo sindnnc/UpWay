@@ -1,8 +1,10 @@
 package com.example.component.theme
 
+import androidx.compose.runtime.Immutable
 import androidx.compose.ui.graphics.Color
 
 //BLUE
+@Immutable
 object Blue {
     val p50 = Color(0xFFe3f2fd)
     val p100 = Color(0xFFbbdefb)
@@ -18,6 +20,7 @@ object Blue {
 }
 
 //RED
+@Immutable
 object Red {
     val p50 = Color(0xFFffebee)
     val p100 = Color(0xFFffcdd2)
@@ -32,6 +35,7 @@ object Red {
 }
 
 //YELLOW
+@Immutable
 object Yellow {
     val p50 = Color(0xFFfff8e1)
     val p100 = Color(0xFFfff9c4)
@@ -46,6 +50,7 @@ object Yellow {
 }
 
 //GREEN
+@Immutable
 object Green {
     val p50 = Color(0xFFe7f4ed)
     val p100 = Color(0xFFc8e6c9)
@@ -60,6 +65,7 @@ object Green {
 }
 
 //GREY
+@Immutable
 object Grey {
     val p50 = Color(0xFFfafafa)
     val p100 = Color(0xFFf5f5f5)
@@ -74,6 +80,7 @@ object Grey {
 }
 
 //PURPLE
+@Immutable
 object Purple {
     val p50 = Color(0xFFf3e5f5)
     val p100 = Color(0xFFe1bee7)

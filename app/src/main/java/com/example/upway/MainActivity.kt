@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.core.view.WindowCompat
 import com.example.component.theme.UpWayTheme
-import com.example.upway.ui.SplashUI
+import com.example.features.navigation.UpWayApplication
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -15,7 +15,7 @@ class MainActivity : ComponentActivity() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
             UpWayTheme {
-                SplashUI()
+                UpWayApplication()
             }
         }
     }
