@@ -1,4 +1,4 @@
-package com.example.features.auth.splash.ui
+package com.example.features.presentation.auth.splash.ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect

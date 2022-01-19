@@ -7,15 +7,33 @@ import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 
 private val DarkColorPalette = darkColors(
-    primary = Blue.p300,
-    primaryVariant = Blue.p500,
-    secondary = Green.p100,
+    primary = Blue.p400,
+    primaryVariant = Blue.p600,
+    secondary = Green.p300,
+    background = Gray.p1100 ,
+    error = Red.p500,
+    onBackground = Specified.White,
+    onError = Specified.Black,
+    onPrimary = Specified.Black,
+    onSecondary = Specified.White,
+    onSurface = Specified.White,
+    secondaryVariant = Green.p500,
+    surface = Specified.Black,
 )
 
 private val LightColorPalette = lightColors(
-    primary = Blue.p300,
-    primaryVariant = Blue.p500,
-    secondary = Green.p100,
+    primary = Blue.p400,
+    primaryVariant = Blue.p600,
+    secondary = Green.p300,
+    background = Gray.p1100 ,
+    error = Red.p500,
+    onBackground = Specified.Black,
+    onError = Specified.White,
+    onPrimary = Specified.White,
+    onSecondary = Specified.Black,
+    onSurface = Specified.Black,
+    secondaryVariant = Green.p500,
+    surface = Specified.White
 )
 
 
@@ -29,7 +47,7 @@ fun UpWayTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable(
 
     MaterialTheme(
         colors = colors,
-        typography = Typography,
+        typography = OpenSansTypography,
         shapes = CustomMediumShapes,
         content = content
     )

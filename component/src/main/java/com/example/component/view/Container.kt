@@ -11,12 +11,11 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun Container(
-    modifier: Modifier = Modifier,
     alignment: Alignment = Alignment.Center,
     content: @Composable BoxScope.() -> Unit,
 ) {
     Box(
-        modifier = modifier
+        modifier = Modifier
             .fillMaxSize()
             .background(MaterialTheme.colors.background),
         contentAlignment = alignment

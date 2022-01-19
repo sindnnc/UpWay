@@ -7,10 +7,10 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.features.auth.login.ui.LoginUI
-import com.example.features.auth.login.viewmodel.LoginViewModel
-import com.example.features.auth.onboard.ui.OnBoardUI
-import com.example.features.auth.splash.ui.SplashUI
+import com.example.features.presentation.auth.login.ui.LoginUI
+import com.example.features.presentation.auth.login.viewmodel.LoginViewModel
+import com.example.features.presentation.auth.onboard.ui.OnBoardUI
+import com.example.features.presentation.auth.splash.ui.SplashUI
 
 @Composable
 fun UpWayApplication() {
@@ -20,7 +20,10 @@ fun UpWayApplication() {
     val screenHeight = configuration.screenHeightDp.dp
     val screenWidth = configuration.screenWidthDp.dp
 
-    NavHost(navController = navController, startDestination = Screens.SplashUI.route) {
+    NavHost(
+        navController = navController,
+        startDestination = Screens.SplashUI.route
+    ) {
         composable(route = Screens.SplashUI.route) {
             SplashUI(navController = navController)
         }
@@ -40,5 +43,6 @@ fun UpWayApplication() {
                 screenHeight = screenHeight
             )
         }
+
     }
 }

@@ -1,5 +1,6 @@
 package com.example.upway
 
+import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -18,6 +19,9 @@ class MainActivity : ComponentActivity() {
                 UpWayApplication()
             }
         }
+        val sharedPref = this.getSharedPreferences(
+            getString(R.string.app_name), Context.MODE_PRIVATE
+        )
     }
 }
 

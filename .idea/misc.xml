@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/sinan/AndroidStudioProjects/UpWay/component/src/main/res/font/asfa.xml" value="0.22777777777777777" />
         <entry key="..\:/Users/sinan/AndroidStudioProjects/UpWay/features/src/main/res/drawable/image.xml" value="0.22870370370370371" />
+        <entry key="..\:/Users/sinan/AndroidStudioProjects/UpWay/features/src/main/res/font/app_font.xml" value="0.22777777777777777" />
       </map>
     </option>
   </component>

@@ -16,7 +16,12 @@ object Blue {
     val p700 = Color(0xFF1976d2)
     val p800 = Color(0xFF1565c0)
     val p900 = Color(0xFF0d47a1)
+}
 
+@Immutable
+object Specified {
+    val White = Color(0xFFffffff)
+    val Black = Color(0xFF000000)
 }
 
 //RED
@@ -66,7 +71,7 @@ object Green {
 
 //GREY
 @Immutable
-object Grey {
+object Gray {
     val p50 = Color(0xFFfafafa)
     val p100 = Color(0xFFf5f5f5)
     val p200 = Color(0xFFeeeeee)
@@ -77,6 +82,8 @@ object Grey {
     val p700 = Color(0xFF616161)
     val p800 = Color(0xFF424242)
     val p900 = Color(0xFF212121)
+    val p1000 = Color(0xFF1a1a1a)
+    val p1100 = Color(0xFF0d0d0d)
 }
 
 //PURPLE
