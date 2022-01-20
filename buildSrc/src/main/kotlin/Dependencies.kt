@@ -7,8 +7,9 @@ object Dependencies {
     //GOOGLE
     const val googleMaterial = "com.google.android.material:material:${Versions.APPCOMPAT_VERSION}"
 
-    //DATASTORE
+    //STORAGE
     const val dataStore = "androidx.datastore:datastore-preferences:${Versions.DATASTORE_VERSION}"
+    const val encryptedPreference = "androidx.security:security-crypto:${Versions.ENCRYPTED_VERSION}"
 
     //COMPOSE
     const val compose = "androidx.activity:activity-compose:${Versions.APPCOMPAT_VERSION}"

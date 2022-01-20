@@ -1,15 +1,12 @@
 package com.example.features.presentation.auth.login.ui
 
 import android.annotation.SuppressLint
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.unit.Dp
 import androidx.navigation.NavController
@@ -20,7 +17,6 @@ import com.example.component.popUp.CustomPopUp
 import com.example.component.text.ButtonSingleText
 import com.example.component.text.HeaderText
 import com.example.component.textfield.AuthTextField
-import com.example.component.theme.Gray
 import com.example.component.view.Container
 import com.example.features.R
 import com.example.features.extension.noRippleClickable
@@ -35,20 +31,21 @@ fun LoginUI(navController: NavController, viewModel: LoginViewModel, screenHeigh
     val email = mutableStateOf("")
     val popUp = mutableStateOf(false)
 
+
     Container(alignment = Alignment.BottomCenter) {
         Column(
             modifier = Modifier.fillMaxSize().noRippleClickable {
-                    if (popUp.value) popUp.value = false
-                    focusManager.clearFocus()
-                }.padding(horizontal = screenWidth * 0.08F, vertical = screenWidth * 0.03F),
+                if (popUp.value) popUp.value = false
+                focusManager.clearFocus()
+            }.padding(horizontal = screenWidth * 0.08F, vertical = screenWidth * 0.03F),
             verticalArrangement = Arrangement.Center,
         ) {
             HeaderView(modifier = Modifier.weight(1.2F, true), navController = navController, popUp)
             BodyView(Modifier.weight(2F, true), email, password, screenHeight, popUp)
-            BottomView(Modifier.fillMaxSize().weight(2F, true))
+            BottomView(Modifier.fillMaxSize().weight(2F, true), viewModel)
         }
         if (popUp.value) {
-            CustomPopUp() {
+            CustomPopUp {
             }
         }
     }
@@ -104,14 +101,18 @@ private fun BodyView(
 
 //BOTTOM VIEW
 @Composable
-private fun BottomView(modifier: Modifier = Modifier) {
+private fun BottomView(modifier: Modifier = Modifier, viewModel: LoginViewModel) {
     Row(
         modifier = modifier,
         horizontalArrangement = Arrangement.SpaceEvenly,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        LoginIconButton(Icons.Default.LocationOn) {}
-        LoginIconButton(Icons.Default.Face) {}
+        LoginIconButton(Icons.Default.LocationOn) {
+            viewModel.writeData()
+        }
+        LoginIconButton(Icons.Default.Face) {
+            viewModel.readData()
+        }
         LoginIconButton(Icons.Default.Warning) {}
         LoginIconButton(Icons.Default.Warning) {}
     }

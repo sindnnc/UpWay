@@ -2,6 +2,8 @@ plugins {
     id(IdPlugin.android)
     id(IdPlugin.library)
     id(IdPlugin.serialization)
+    kotlin(IdPlugin.kapt)
+    id(IdPlugin.hilt)
 }
 
 android {
@@ -32,22 +34,29 @@ android {
     }
 }
 
+kapt {
+    correctErrorTypes = true
+}
+
+
 dependencies {
 
-    //MODULES
-
-    //DATASTORE
+    //STORAGE
     implementation(Dependencies.dataStore)
+    implementation(Dependencies.encryptedPreference)
+
 
     //CORE
     implementation(Dependencies.core)
     implementation(Dependencies.appCompat)
     implementation(Dependencies.googleMaterial)
 
-    //TEST
-    testImplementation(TestDependencies.junit)
-    androidTestImplementation(AndroidTestDependencies.junit)
-    androidTestImplementation(AndroidTestDependencies.espresso)
+    //HILT
+    kapt(Dependencies.hiltCompiler)
+    implementation(Dependencies.hiltAndroid)
+
+    //JETBRAINS
+    implementation(Dependencies.jetBrainsKotlin)
 
     //KTOR
     implementation(Dependencies.ktorCio)
@@ -55,7 +64,10 @@ dependencies {
     implementation(Dependencies.ktorSerialization)
     implementation(Dependencies.jetBrainSerialization)
 
-    //JETBRAINS
-    implementation(Dependencies.jetBrainsKotlin)
+    //TEST
+    testImplementation(TestDependencies.junit)
+    androidTestImplementation(AndroidTestDependencies.junit)
+    androidTestImplementation(AndroidTestDependencies.espresso)
+
 
 }

@@ -49,6 +49,9 @@ dependencies {
     implementation(project(mapOf("path" to ":core")))
     implementation(project(mapOf("path" to ":component")))
 
+    //DATASTORE
+    implementation(Dependencies.dataStore)
+
     //CORE
     implementation(Dependencies.core)
     implementation(Dependencies.appCompat)

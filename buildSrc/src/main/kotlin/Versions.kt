@@ -5,8 +5,9 @@ object Versions {
     const val APPCOMPAT_VERSION = "1.4.0"
     const val LIFECYCLE_VERSION = "2.4.0"
 
-    //DATASTORE
+    //STORAGE
     const val DATASTORE_VERSION = "1.0.0"
+    const val ENCRYPTED_VERSION = "1.0.0"
 
     //HILT
     const val HILT_VERSION = "2.38.1"
